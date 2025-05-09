@@ -6,15 +6,32 @@
 
 ![YOLO Web Interface Preview](https://github.com/user-attachments/assets/824a3683-34da-4b73-961b-23791cbe327a)
 
+## Table of Contents
 
+- [Team Members](#team-members)  
+- [Project Overview](#project-overview)  
+- [Technologies Used](#technologies-used)  
+- [Problem Statement](#problem-statement)  
+- [Tech Stack](#tech-stack)  
+- [System Features](#system-features)  
+  - [Real-Time Object Detection](#real-time-object-detection)  
+  - [Web Interface](#web-interface)  
+  - [Azure Deployment](#azure-deployment)  
+  - [MLOps Integration](#mlops-integration)  
+- [Functional Architecture](#functional-architecture)  
+- [Functional Requirements](#functional-requirements)  
+- [Model Evaluation Results](#model-evaluation-results)  
+- [Performance Metrics](#performance-metrics)  
+- [Non-Functional Highlights](#non-functional-highlights)  
+- [Future Work](#future-work)  
+- [Get Started](#get-started)
 
 ## Team Members
 - **Shehab Ahmed** – Data Collection, Preprocessing  
-- **Aya Mohamed** – Data Collection, Preprocessing
+- **Aya Mohamed** – Data Collection, Preprocessing  
 - **Shiref Ashraf** – Model Development, Evaluation  
 - **Kareem Yasser Mazrou** – Deployment, Real-Time Testing  
 - **Aliaa Abobakr** – MLOps, Monitoring  
- 
 
 _All team members contributed to documentation and system design._
 
@@ -34,7 +51,6 @@ We developed a real-time object detection system tailored for autonomous vehicle
 	<code><img width="50" src="https://img.shields.io/badge/YOLOv11-FFCC00?style=for-the-badge&logo=OpenCV&logoColor=black" alt="Yolo" title="Yolo"/></code>
 	<code><img width="50" src="https://upload.wikimedia.org/wikipedia/commons/3/32/OpenCV_Logo_with_text_svg_version.svg" alt="OpenCV" title="OpenCV"/></code>
 </div>
-
 
 ## Problem Statement
 
@@ -74,11 +90,11 @@ Autonomous vehicles must process visual data in real-time to make safe and accur
 
 ## Functional Architecture
 
-1. Video Input: Accepts video via web upload or live stream.
-2. Preprocessing: Frames resized, normalized, and enhanced.
-3. Model Inference: YOLOv11 detects and classifies objects in real time.
-4. Output Rendering: Displays predictions via bounding boxes and labels.
-5. Monitoring: Tracks metrics like mAP, IoU, and FPS for performance.
+1. Video Input: Accepts video via web upload or live stream.  
+2. Preprocessing: Frames resized, normalized, and enhanced.  
+3. Model Inference: YOLOv11 detects and classifies objects in real time.  
+4. Output Rendering: Displays predictions via bounding boxes and labels.  
+5. Monitoring: Tracks metrics like mAP, IoU, and FPS for performance.  
 
 ## Functional Requirements
 
@@ -119,10 +135,10 @@ These results demonstrate strong object detection performance, especially in ter
 
 ## Future Work
 
-- Support for additional sensor fusion (LiDAR, Radar)
-- Fine-tuning YOLOv11 for night and adverse weather conditions
-- Expanding MLOps capabilities with model drift detection and alerting
-- Vehicle simulation testing using CARLA or similar environments
+- Support for additional sensor fusion (LiDAR, Radar)  
+- Fine-tuning YOLOv11 for night and adverse weather conditions  
+- Expanding MLOps capabilities with model drift detection and alerting  
+- Vehicle simulation testing using CARLA or similar environments  
 
 ## Get Started
 

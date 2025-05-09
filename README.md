@@ -138,7 +138,6 @@ These results demonstrate strong object detection performance, especially in ter
 - Support for additional sensor fusion (LiDAR, Radar)  
 - Fine-tuning YOLOv11 for night and adverse weather conditions  
 - Expanding MLOps capabilities with model drift detection and alerting  
-- Vehicle simulation testing using CARLA or similar environments  
 
 ## Get Started
 

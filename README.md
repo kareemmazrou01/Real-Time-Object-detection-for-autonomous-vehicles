@@ -1,121 +1,126 @@
-# Real-Time-Object-detection-for-autonomous-vehicles
-
+# Real-Time Object Detection for Autonomous Vehicles
 
 ## Team Members
-- **Kareem Yasser Mazrou**
-- **Shiref Ashraf**
-- **Aliaa Abobakr**
-- **Shehab Ahmed**
-- **Aya Mohamed**
+- **Kareem Yasser Mazrou** – Deployment, Real-Time Testing  
+- **Shiref Ashraf** – Model Development, Evaluation  
+- **Aliaa Abobakr** – MLOps, Monitoring  
+- **Shehab Ahmed** – Data Collection, Preprocessing  
+- **Aya Mohamed** – Data Collection, Preprocessing  
 
-## Idea
-Build an object detection model specifically tailored for autonomous vehicles to detect and classify objects (pedestrians, vehicles, traffic signs, obstacles) in real time.
+_All team members contributed to documentation and system design._
 
-## Description
-This project gathers and processes datasets from sources like KITTI and COCO, then develops a real-time object detection model using fast and efficient architectures such as YOLO or SSD. The key challenges include:
-- Handling varying environmental conditions.
-- Ensuring high detection accuracy (using metrics like mAP and IoU).
-- Achieving rapid inference speeds (measured in FPS).
+## Project Overview
 
-The solution is integrated into an autonomous vehicle system with continuous monitoring and MLOps pipelines to manage performance in dynamic driving scenarios.
+We developed a real-time object detection system tailored for autonomous vehicles, capable of identifying pedestrians, vehicles, traffic signs, and obstacles from live video streams. The system utilizes YOLOv11 for high-speed inference and is deployed using a Flask web interface, integrated with Microsoft Azure and MLOps pipelines for continuous delivery and monitoring.
 
-## Tasks Distribution
+## Technologies Used
 
-| Team Member         | Role                                      |
-|---------------------|-------------------------------------------|
-| Aya Mohamed         | Data Collection, Preprocessing            |
-| Shehab Ahmed        | Data Collection, Preprocessing            |
-| Shiref Ashraf       | Model Development, Evaluation             |
-| Kareem Mazrou       | Deployment and Real-Time Testing          |
-| Aliaa Abobakr       | MLOps, Monitoring                         |
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python Badge"/>
+  <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask Badge"/>
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch Badge"/>
+  <img src="https://img.shields.io/badge/YOLOv11-FFCC00?style=for-the-badge&logo=OpenCV&logoColor=black" alt="YOLO Badge"/>
+  <img src="https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white" alt="Azure Badge"/>
+  <img src="https://img.shields.io/badge/MLflow-1E4C6B?style=for-the-badge&logo=mlflow&logoColor=white" alt="MLflow Badge"/>
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker Badge"/>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5 Badge"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3 Badge"/>
+</p>
 
-_All team members will contribute to the documentation process._
 
-## Technologies
-- **Deep Learning Frameworks:** TensorFlow or PyTorch for training object detection models.
-- **Object Detection Architectures:** YOLO, SSD, and Faster R-CNN tailored for real-time inference.
-- **Deployment Tools:** TensorFlow Serving or ONNX for optimized inference pipelines.
-- **Hardware Integration:** Integration with vehicle camera systems for real-time object detection.
-- **MLOps Practices:** MLflow for continuous monitoring and retraining.
+## Problem Statement
+
+Autonomous vehicles must process visual data in real-time to make safe and accurate driving decisions. This project addresses the challenges of:
+- High-speed inference for real-time decision-making  
+- Robust detection across various environmental conditions  
+- Seamless integration with control systems  
+- MLOps-driven deployment and lifecycle management
+
+## Tech Stack
+
+- **Model Architecture:** YOLOv11, SSD, Faster R-CNN  
+- **Frameworks:** PyTorch, TensorFlow  
+- **Interface:** Flask Web Application  
+- **Deployment:** Microsoft Azure, Docker  
+- **MLOps:** MLflow, Azure Pipelines  
+- **Data Sources:** KITTI, COCO datasets  
+
+## System Features
+
+### Real-Time Object Detection
+- Detects pedestrians, vehicles, traffic signs, and other road objects.
+- Achieves real-time processing (≥30 FPS).
+- Outputs bounding boxes with class labels and confidence scores.
+
+### Web Interface
+- Built using Flask to accept video input and display detection output.
+- User-friendly design for testing and monitoring predictions.
+
+### Azure Deployment
+- Deployed using Azure App Services and Azure Machine Learning.
+- Supports scalable, cloud-based inference with GPU acceleration.
+
+### MLOps Integration
+- MLflow integration for model tracking and retraining.
+- Continuous monitoring and automatic updates upon performance drift.
+
+## Functional Architecture
+
+1. Video Input: Accepts video via web upload or live stream.
+2. Preprocessing: Frames resized, normalized, and enhanced.
+3. Model Inference: YOLOv11 detects and classifies objects in real time.
+4. Output Rendering: Displays predictions via bounding boxes and labels.
+5. Monitoring: Tracks metrics like mAP, IoU, and FPS for performance.
 
 ## Functional Requirements
 
-### Real-Time Data Acquisition and Input
-- The system shall interface with onboard cameras to capture continuous video streams.
-- It shall support multiple camera inputs and standard video formats.
-- It shall ensure low-latency acquisition to support real-time processing.
+| Feature                          | Description |
+|----------------------------------|-------------|
+| Real-Time Inference              | ≥30 FPS with low latency (≤100ms per frame) |
+| Video Stream Support             | Accepts multiple camera feeds or uploaded video |
+| Scalable Deployment              | Cloud-ready, edge-compatible |
+| Integration-Ready                | Exposes RESTful API for vehicle control systems |
+| Model Retraining                 | Automated via MLOps pipelines |
+| Logging & Alerts                 | Logs inference stats, errors, and sends alerts on anomalies |
 
-### Data Preprocessing
-- The system shall automatically resize and normalize incoming frames to match the model’s input dimensions (e.g., 416×416 for YOLO).
-- It shall apply necessary image enhancements (e.g., noise reduction) to optimize detection accuracy.
-- It shall handle image augmentation during training but apply real-time preprocessing during inference.
+## Model Evaluation Results
 
-### Object Detection and Classification
-- The system shall detect and classify objects (e.g., pedestrians, vehicles, traffic signs, obstacles) in each frame.
-- It shall generate bounding boxes around detected objects with associated class labels and confidence scores.
-- It shall leverage a deep learning model (e.g., YOLO, SSD, or Faster R-CNN) optimized for real-time inference.
-- It shall maintain a minimum processing speed (e.g., at least 30 frames per second) to support dynamic driving scenarios.
+| Metric         | Value   |
+|----------------|---------|
+| Recall         | 0.8188  |
+| mAP@50         | 0.8975  |
+| Box Precision  | 0.9295  |
 
-### Integration with Vehicle Systems
-- The system shall integrate with the vehicle’s control unit to provide timely alerts and information based on detected objects.
-- It shall output detection results via a standardized interface (e.g., RESTful API) for downstream processing in navigation and decision-making modules.
+These results demonstrate strong object detection performance, especially in terms of bounding box accuracy and classification precision, supporting real-time deployment in dynamic driving environments.
 
-### Performance Evaluation and Metrics
-- The system shall evaluate detection performance using metrics such as mean Average Precision (mAP) and Intersection over Union (IoU).
-- It shall log performance statistics (e.g., detection accuracy, FPS) for continuous monitoring and debugging.
+## Performance Metrics
 
-### Deployment and Scalability
-- The system shall support deployment on edge devices (integrated in the vehicle) to ensure low latency.
-- It shall be scalable to operate efficiently under varying conditions (e.g., different lighting, weather, and urban environments).
+- **mAP (mean Average Precision):** Measures detection accuracy  
+- **IoU (Intersection over Union):** Assesses bounding box precision  
+- **FPS (Frames Per Second):** Gauges real-time capability  
+- **Latency:** Time per frame (target ≤100ms)  
 
-### Model Management and MLOps Integration
-- The system shall integrate with MLOps tools for tracking model versions, hyperparameter tuning, and performance monitoring.
-- It shall support automated retraining or model updates when performance degradation or environmental changes are detected.
+## Non-Functional Highlights
 
-### Error Handling and Recovery
-- The system shall detect, log, and report errors during data acquisition, preprocessing, or inference.
-- It shall include fallback mechanisms in case of system failures or degraded detection performance.
-- It shall notify operators or maintenance teams when critical issues occur.
+- **Reliability:** 99.999% uptime, error tolerance, fail-safe modes  
+- **Security:** Data encryption, role-based access, cyber threat detection  
+- **Scalability:** Modular components support future expansion  
+- **Compliance:** Designed with ISO 26262 and ASIL guidelines in mind  
+- **Portability:** Runs on cloud, edge devices, or local simulation setups  
+- **Energy Efficiency:** Optimized for low-power embedded systems  
 
-## Non-Functional Requirements
+## Future Work
 
-### Performance
-- **Latency:** Process each video frame and produce detection results within a maximum latency of 100 milliseconds.
-- **Throughput:** Sustain a minimum processing rate of 30 frames per second (FPS) under normal driving conditions.
-- **Resource Utilization:** Efficiently utilize CPU, GPU, and memory resources, even on embedded hardware.
+- Support for additional sensor fusion (LiDAR, Radar)
+- Fine-tuning YOLOv11 for night and adverse weather conditions
+- Expanding MLOps capabilities with model drift detection and alerting
+- Vehicle simulation testing using CARLA or similar environments
 
-### Reliability and Availability
-- **Uptime:** Achieve an operational availability of at least 99.999% to ensure continuous monitoring during vehicle operation.
-- **Fault Tolerance:** Include redundancy and fail-safe mechanisms to maintain functionality in case of hardware or software failures.
-- **Error Handling:** Log errors and trigger predefined fallback safety protocols (e.g., emergency braking) when critical issues occur.
+## Get Started
 
-### Scalability
-- **Modularity:** Design with modular components to easily incorporate additional sensors or processing units as needed.
-- **Horizontal Scalability:** Support scaling (e.g., adding more processing nodes or upgrading hardware) without significant redesign, particularly during simulation or development phases.
-
-### Safety
-- **Compliance:** Comply with automotive safety standards (such as ISO 26262) and meet the required Automotive Safety Integrity Level (ASIL) for object detection components.
-- **Fail-Safe Design:** Default to a safe state in case of system degradation or failure to prevent hazardous situations.
-- **Robustness:** Operate reliably under various environmental conditions (e.g., varying lighting, weather, and road types).
-
-### Security
-- **Data Protection:** Secure all data transmitted between cameras, onboard units, and cloud services using industry-standard encryption protocols.
-- **Access Control:** Implement strict authentication and authorization mechanisms to prevent unauthorized access or tampering.
-- **Attack Mitigation:** Include intrusion detection and real-time monitoring to detect and mitigate cyber threats.
-
-### Maintainability
-- **Modular Architecture:** Maintain a modular and well-documented codebase to facilitate easy updates, debugging, and component replacement.
-- **Logging and Diagnostics:** Provide comprehensive logging and diagnostic tools to assist with troubleshooting and performance monitoring.
-- **Automated Updates:** Support automated deployment and model retraining pipelines through integration with MLOps tools (e.g., MLflow, Kubeflow).
-
-### Usability (Operator Interface)
-- **Dashboard:** If an operator interface is provided, present real-time video feeds with overlaid detection results, performance metrics, and error logs in an intuitive format.
-- **Alerting:** Include visual and/or audible alerts for critical events, enabling quick response from the vehicle operator.
-
-### Portability and Interoperability
-- **Deployment Flexibility:** Deployable on a range of hardware platforms, including embedded systems in vehicles and cloud-based environments for testing and simulation.
-- **Standard Interfaces:** Adhere to standard communication protocols and provide APIs for seamless integration with other vehicle systems (e.g., navigation, control units).
-
-### Resource Efficiency
-- **Energy Consumption:** Optimize for low power consumption to accommodate battery-operated vehicles.
-- **Optimization:** Implement efficient algorithms and hardware acceleration where possible to minimize processing overhead.
+To run locally:
+```bash
+git clone https://github.com/your-repo/realtime-object-detection.git
+cd realtime-object-detection
+pip install -r requirements.txt
+python app.py

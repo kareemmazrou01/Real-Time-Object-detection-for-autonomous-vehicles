@@ -22,7 +22,7 @@ We developed a real-time object detection system tailored for autonomous vehicle
 	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png" alt="Python" title="Python"/></code>
 	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/flask.png" alt="Flask" title="Flask"/></code>
 	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/tensorflow.png" alt="TensorFlow" title="TensorFlow"/></code>
-	<code><img width="50" src="https://raw.githubusercontent.com/AlexeyAB/darknet/master/logo/darknet_logo.png" alt="Yolo" title="Yolo"/></code>
+	<code><img width="50" src="https://github.com/ultralytics/yolov5/releases/download/v1.0/logo-social.png" alt="Yolo" title="Yolo"/></code>
 	<code><img width="50" src="https://upload.wikimedia.org/wikipedia/commons/3/32/OpenCV_Logo_with_text_svg_version.svg" alt="OpenCV" title="OpenCV"/></code>
 </div>
 

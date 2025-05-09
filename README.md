@@ -3,7 +3,7 @@
 ## Team Members
 - **Shehab Ahmed** – Data Collection, Preprocessing  
 - **Aya Mohamed** – Data Collection, Preprocessing
-- - **Shiref Ashraf** – Model Development, Evaluation  
+- **Shiref Ashraf** – Model Development, Evaluation  
 - **Kareem Yasser Mazrou** – Deployment, Real-Time Testing  
 - **Aliaa Abobakr** – MLOps, Monitoring  
  

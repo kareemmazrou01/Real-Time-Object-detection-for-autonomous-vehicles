@@ -4,7 +4,7 @@
 
 **YOLO Real-Time Object Detection** web interface in action:
 
-![YOLO Web Interface Preview](https://pixeldrain.com/u/yRxbtw5h)
+![YOLO Web Interface Preview](https://github.com/user-attachments/assets/824a3683-34da-4b73-961b-23791cbe327a)
 
 > 📸 The interface shows object detections on live traffic footage with bounding boxes and class labels powered by YOLO.
 

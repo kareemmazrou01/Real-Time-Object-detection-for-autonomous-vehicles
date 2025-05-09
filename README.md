@@ -1,11 +1,12 @@
 # Real-Time Object Detection for Autonomous Vehicles
 
 ## Team Members
+- **Shehab Ahmed** – Data Collection, Preprocessing  
+- **Aya Mohamed** – Data Collection, Preprocessing 
 - **Kareem Yasser Mazrou** – Deployment, Real-Time Testing  
 - **Shiref Ashraf** – Model Development, Evaluation  
 - **Aliaa Abobakr** – MLOps, Monitoring  
-- **Shehab Ahmed** – Data Collection, Preprocessing  
-- **Aya Mohamed** – Data Collection, Preprocessing  
+ 
 
 _All team members contributed to documentation and system design._
 

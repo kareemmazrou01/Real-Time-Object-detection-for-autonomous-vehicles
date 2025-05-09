@@ -1,5 +1,14 @@
 # Real-Time Object Detection for Autonomous Vehicles
 
+## Website Preview
+
+**YOLO Real-Time Object Detection** web interface in action:
+
+![YOLO Web Interface Preview](https://pixeldrain.com/u/J2shDSwu)
+
+> 📸 The interface shows object detections on live traffic footage with bounding boxes and class labels powered by YOLO.
+
+
 ## Team Members
 - **Shehab Ahmed** – Data Collection, Preprocessing  
 - **Aya Mohamed** – Data Collection, Preprocessing
